@@ -5,7 +5,6 @@ dotenv.config();
 const SECRET_KEY = Buffer.from(process.env.SECRET_KEY,"base64").toString('utf-8');
 
 
-
 const generateToken = (payload) => {
     return jwt.sign(payload, SECRET_KEY);
 };
